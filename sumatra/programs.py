@@ -190,7 +190,7 @@ class RExecutable(Executable):
 @component
 class JuliaExecutable(Executable):
     name = "Julia"
-    executable_names = ('julia')
+    executable_names = ('julia', 'srun julia')
     file_extensions = ('.jl')
     default_executable_name = "julia"
     requires_script = True
