@@ -17,7 +17,7 @@ from __future__ import with_statement
 from __future__ import unicode_literals
 import warnings
 
-from sumatra.dependency_finder import neuron, python, genesis, matlab, r
+from sumatra.dependency_finder import neuron, python, genesis, matlab, r, julia
 
 
 def find_dependencies(filename, executable):
@@ -41,6 +41,8 @@ def find_dependencies(filename, executable):
         return genesis.find_dependencies(filename, executable)
     elif executable.name == "R":
         return r.find_dependencies(filename, executable)
+    elif "Julia" in executable.name:
+        return julia.find_dependencies(filename, executable)
     else:
         warnings.warn("find_dependencies() not yet implemented for %s" % executable.name)
         return []

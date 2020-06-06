@@ -188,6 +188,15 @@ class RExecutable(Executable):
 
 
 @component
+class JuliaExecutable(Executable):
+    name = "Julia"
+    executable_names = ('julia')
+    file_extensions = ('.jl')
+    default_executable_name = "julia"
+    requires_script = True
+
+
+@component
 class NESTSimulator(Executable):
     name = "NEST"
     executable_names = ('nest',)
