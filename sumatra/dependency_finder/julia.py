@@ -14,7 +14,7 @@ from sumatra.dependency_finder import core
 
 class Dependency(core.BaseDependency):
     """
-    Contains information about a Matlab toolbox.
+    Contains information about a Julia toolbox.
     """
     module = 'julia'
     
